@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>NaN Example</h1>
+    <script>
+        //NaN-error when no input is given
+       num= parseInt(prompt("Enter any number"));
+     /** if(isNaN(num)){
+          alert("Invalid number");
+      }
+      else{
+      num=num+5;
+      document.write("<br>Final Marks:"+num);}**/
+      do{
+
+      num= parseInt(prompt("Enter any number"));
+      if(isNaN(num)){
+        alert("Invalid number");
+      }
+      else{
+     num=num+5;
+      document.write("<br>Final Marks:"+num);}
+      }while(isNaN(num));
+     </script>
+    
+</body>
+</html>

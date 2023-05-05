@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+       Number: <input type="text" id="txt">
+       <span id="msg"></span><br>
+        <p id="p"></p>
+        <input id="btn" type="submit" value="Submit">
+        
+             </form>
+      <script>
+       
+       //var isvalid=true;
+       btn.onclick=function()
+        {
+       var data=document.getElementById("txt").value;
+       var para=document.getElementById("p");
+       var error=document.getElementById("msg");
+            
+            if(data=="")
+            {
+               error.innerHTML="Text Box is empty";
+               error.style.color="red";
+               //var isvalid=false
+            }
+            else{
+            if(data<10)
+            {
+                para.innerHTML="It is less than 10";
+            }
+            else
+            {
+                para.innerHTML="It is greater than 10";
+            }
+        }
+            return false;
+        }
+       // check();
+    </script>
+</body>
+</html>

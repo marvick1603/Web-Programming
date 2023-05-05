@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <script>
+        var points=0;
+        var incorrect=0;
+        var check=1;
+        do{
+            var operation = prompt("Enter + for addition, - for subtraction, * for multiplication");
+            if (operation === "+" || operation === "-" || operation === "*"){
+                check=0;
+            }
+        }while(check==1);
+        while(check==0){
+            var num1 = Math.floor(Math.random() * 10);
+            var num2 = Math.floor(Math.random() * 10);
+            var question = prompt("What is " + num1 + " " + operation + " " + num2 + "?");
+            var answer;
+            if (operation === "+") {
+          answer = num1 + num2;
+        } else if (operation === "-") {
+          answer = num1 - num2;
+        } else if (operation === "*") {
+          answer = num1 * num2;
+        }
+        if (answer == question) {
+          alert("Correct, got 1 point");
+          points++;
+        } else {
+          alert("Sorry..Incorrect!");
+          incorrect++;
+        }
+        var again = confirm("Do you want to play again?");
+        if(again==false){
+            alert("Final Score: "+"\nTotal points:" + points + "\nTotal Incorrect Questions: " + incorrect);
+            check=1;
+        }
+        }
+    </script>
+    <a href="index.html">Exit the Game</a>
+</body>
+</html>

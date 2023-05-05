@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Onclick () Event added on Button
+    </h1>
+    <input type="button" value="Click here" onclick="func();">
+   <input type="button" value="Click Me" onclick="getConfirmation();">
+    
+    /**function func(){
+        alert("You clicked on the button");
+        document.write("func is being excuted ");
+    }**/
+    
+<script>
+function getConfirmation()
+{
+var returnValue = confirm("Do you want to continue?");
+if( returnValue == true )
+{
+alert("User wants to continue!");
+}
+else
+{
+alert("User does not want to continue!");
+}
+}
+</script>
+    
+   
+</body>
+</html>

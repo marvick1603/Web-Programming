@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form1">
+        
+            
+            
+         
+            <select name="cars" id="cars">
+              <option value="-1">Select a car</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+            
+            <span id="err"></span><br><br><br>
+            
+        
+        <input type="submit" value="submit">
+    </form>
+    <script>
+document.form1.onsubmit=function()
+{
+return validate();
+}
+var validate= function()
+{
+var isvalid=true;
+var car=document.getElementById("cars").value;
+var error=document.getElementById("err");
+if(car=="-1")
+{
+    error.innerHTML="Please select car";
+    error.style.color="red";
+    isvalid=false;
+}
+return isvalid;
+}
+    </script>
+</body>
+</html>

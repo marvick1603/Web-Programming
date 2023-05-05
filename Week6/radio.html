@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+<input type="radio" name="rb" value="male">Male
+<input type="radio" name="rb" value="female">Female
+<span id="msg"></span>
+<br>
+<input type="submit" value="SUBMIT">
+    </form>
+
+    <script>
+document.form1.onsubmit=function()
+{
+var isvalid=true;
+var gender=null;
+var radiobutton=document.form1.rb;//return array of radio button as there are two radio have same name
+var error=document.getElementById("msg");
+for(i=0;i<radiobutton.length;i++){
+    if(radiobutton[i].checked==true)
+    {
+       gender =radiobutton.value;
+    }
+}
+if(gender==null)
+{
+error.innerHTML="Select any Radio Button";
+error.style.color="red";
+isvalid=false;
+}
+return isvalid;
+}
+// w3school and do it yourself 
+    </script>
+    
+</body>
+</html>
